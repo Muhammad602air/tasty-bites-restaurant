@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasty Bites Restaurant</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <nav>
@@ -23,208 +26,284 @@
 
 <section id="home" class="hero">
     <div class="hero-content">
-        <h1>Welcome To Tasty Bites</h1>
-        <p>Fresh Food • Fast Service • Great Taste</p>
+        <h1 class="display-3 fw-bold">Welcome To Tasty Bites</h1>
+        <p class="fs-4">Fresh Food • Fast Service • Great Taste</p>
         <a href="#menu" class="btn">Order Now</a>
     </div>
 </section>
 
-<section id="about">
-    <h1 class="title hidden">Why Choose Us?</h1>
-    <div class="features-container">
-        <div class="feature-box hidden">
-            <span class="icon">🧑‍🍳</span>
-            <h3>Master Chefs</h3>
-            <p>Our expert chefs prepare every dish with passion and perfection.</p>
-        </div>
-        <div class="feature-box hidden">
-            <span class="icon">🍔</span>
-            <h3>Quality Food</h3>
-            <p>We use only the freshest ingredients to ensure premium taste.</p>
-        </div>
-        <div class="feature-box hidden">
-            <span class="icon">🛒</span>
-            <h3>Online Order</h3>
-            <p>Order your favorite meals from the comfort of your home easily.</p>
-        </div>
-        <div class="feature-box hidden">
-            <span class="icon">⏰</span>
-            <h3>24/7 Service</h3>
-            <p>We are open around the clock to satisfy your cravings anytime.</p>
-        </div>
-    </div>
-</section>
-
-<section id="menu">
-    <h1 class="title hidden">Our Menu</h1>
-
-    <div class="menu-tabs hidden">
-        <button class="tab-btn active-tab" onclick="openMenu('breakfast', this)">☀️ Breakfast</button>
-        <button class="tab-btn" onclick="openMenu('dinner', this)">🌙 Lunch & Dinner</button>
-    </div>
-
-    <div id="breakfast" class="menu-category show-menu">
-        <div class="menu-container">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=60" alt="Chai">
-                <h3>Karak Chai</h3>
-                <p>Rs. 100</p>
-                <button onclick="addToCart('Karak Chai', 100)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=500&q=60" alt="Matka Chai">
-                <h3>Matka Chai</h3>
-                <p>Rs. 150</p>
-                <button onclick="addToCart('Matka Chai', 150)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=500&q=60" alt="Kashmiri Chai">
-                <h3>Kashmiri Chai</h3>
-                <p>Rs. 200</p>
-                <button onclick="addToCart('Kashmiri Chai', 200)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=60" alt="Paratha">
-                <h3>Lacha Paratha</h3>
-                <p>Rs. 120</p>
-                <button onclick="addToCart('Lacha Paratha', 120)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=500&q=60" alt="Cheese Paratha">
-                <h3>Cheese Paratha</h3>
-                <p>Rs. 250</p>
-                <button onclick="addToCart('Cheese Paratha', 250)">Add To Cart</button>
+<section id="about" class="container my-5 py-4">
+    <h1 class="title text-center mb-5 hidden fw-bold">Why Choose Us?</h1>
+    <div class="row g-4 justify-content-center mx-auto" style="max-width: 1140px;">
+        <div class="col-sm-6 col-md-3">
+            <div class="feature-box text-center p-4 bg-white shadow-sm rounded-4 h-100 hidden">
+                <span class="icon d-block mb-2 fs-1">🧑‍🍳</span>
+                <h3 class="fw-bold h5 text-dark">Master Chefs</h3>
+                <p class="text-muted small mb-0">Our expert chefs prepare every dish with passion and perfection.</p>
             </div>
         </div>
-    </div>
-
-    <div id="dinner" class="menu-category" style="display: none;">
-        <div class="menu-container">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1615719413546-198b25453f85?auto=format&fit=crop&w=500&q=60" alt="Chicken Burger">
-                <h3>Chicken Burger</h3>
-                <p>Rs. 400</p>
-                <button onclick="addToCart('Chicken Burger', 400)">Add To Cart</button>
+        <div class="col-sm-6 col-md-3">
+            <div class="feature-box text-center p-4 bg-white shadow-sm rounded-4 h-100 hidden">
+                <span class="icon d-block mb-2 fs-1">🍔</span>
+                <h3 class="fw-bold h5 text-dark">Quality Food</h3>
+                <p class="text-muted small mb-0">We use only the freshest ingredients to ensure premium taste.</p>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60" alt="Beef Burger">
-                <h3>Beef Burger</h3>
-                <p>Rs. 600</p>
-                <button onclick="addToCart('Beef Burger', 600)">Add To Cart</button>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="feature-box text-center p-4 bg-white shadow-sm rounded-4 h-100 hidden">
+                <span class="icon d-block mb-2 fs-1">🛒</span>
+                <h3 class="fw-bold h5 text-dark">Online Order</h3>
+                <p class="text-muted small mb-0">Order your favorite meals from the comfort of your home easily.</p>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=60" alt="Zinger Burger">
-                <h3>Zinger Burger</h3>
-                <p>Rs. 500</p>
-                <button onclick="addToCart('Zinger Burger', 500)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60" alt="Cheese Pizza">
-                <h3>Cheese Pizza</h3>
-                <p>Rs. 1200</p>
-                <button onclick="addToCart('Cheese Pizza', 1200)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=60" alt="Pizza Fajita">
-                <h3>Pizza Fajita</h3>
-                <p>Rs. 1300</p>
-                <button onclick="addToCart('Pizza Fajita', 1300)">Add To Cart</button>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=60" alt="Pasta">
-                <h3>Special Pasta</h3>
-                <p>Rs. 700</p>
-                <button onclick="addToCart('Special Pasta', 700)">Add To Cart</button>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="feature-box text-center p-4 bg-white shadow-sm rounded-4 h-100 hidden">
+                <span class="icon d-block mb-2 fs-1">⏰</span>
+                <h3 class="fw-bold h5 text-dark">24/7 Service</h3>
+                <p class="text-muted small mb-0">We are open around the clock to satisfy your cravings anytime.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="cart" class="cart-wrapper hidden">
-    <div class="cart-section">
-        <h1>🛒 Your Order</h1>
-        <div class="cart-items-container">
-            <ul id="cartList">
-                <li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>
-            </ul>
-        </div>
-        <div class="cart-footer">
-            <h2>Total Bill: <span>Rs. <span id="total">0</span></span></h2>
-            <button class="btn checkout-btn" onclick="submitOrder()">Checkout & Submit Order</button>
-        </div>
-    </div>
-</section>
+<section id="menu" class="bg-light py-5">
+    <div class="container">
+        <h1 class="title text-center mb-4 hidden fw-bold">Our Menu</h1>
 
-<section id="contact" class="hidden">
-    <div class="contact-wrapper">
-        <div class="contact">
-            <h1>Get In Touch ✉️</h1>
-            <p class="contact-sub">Have a question? Drop us a message below!</p>
-            <form onsubmit="event.preventDefault(); alert('Message Sent Successfully!'); this.reset();">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Full Name" required>
+        <div class="menu-tabs text-center mb-5 hidden">
+            <button class="tab-btn active-tab me-2 shadow-sm rounded-pill px-4 py-2" onclick="openMenu('breakfast', this)">☀️ Breakfast</button>
+            <button class="tab-btn shadow-sm rounded-pill px-4 py-2" onclick="openMenu('dinner', this)">🌙 Lunch & Dinner</button>
+        </div>
+
+        <div id="breakfast" class="menu-category show-menu">
+            <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Chai" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-3">
+                            <h3 class="h6 fw-bold mb-1">Karak Chai</h3>
+                            <p class="text-warning fw-bold small mb-3">Rs. 100</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Karak Chai', 100)">Add To Cart</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Your Email Address" required>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Matka Chai" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-3">
+                            <h3 class="h6 fw-bold mb-1">Matka Chai</h3>
+                            <p class="text-warning fw-bold small mb-3">Rs. 150</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Matka Chai', 150)">Add To Cart</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Kashmiri Chai" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-3">
+                            <h3 class="h6 fw-bold mb-1">Kashmiri Chai</h3>
+                            <p class="text-warning fw-bold small mb-3">Rs. 200</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Kashmiri Chai', 200)">Add To Cart</button>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="send-btn">Send Message</button>
-            </form>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Paratha" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-3">
+                            <h3 class="h6 fw-bold mb-1">Lacha Paratha</h3>
+                            <p class="text-warning fw-bold small mb-3">Rs. 120</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Lacha Paratha', 120)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Cheese Paratha" style="height: 180px; object-fit: cover;">
+                        <div class="card-body p-3">
+                            <h3 class="h6 fw-bold mb-1">Cheese Paratha</h3>
+                            <p class="text-warning fw-bold small mb-3">Rs. 250</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Cheese Paratha', 250)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dinner" class="menu-category" style="display: none;">
+            <div class="row g-4 justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6">
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1615719413546-198b25453f85?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Chicken Burger" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Chicken Burger</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 400</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Chicken Burger', 400)">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Beef Burger" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Beef Burger</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 600</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Beef Burger', 600)">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Zinger Burger" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Zinger Burger</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 500</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Zinger Burger', 500)">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Cheese Pizza" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Cheese Pizza</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 1200</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Cheese Pizza', 1200)">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Pizza Fajita" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Pizza Fajita</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 1300</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Pizza Fajita', 1300)">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden text-center">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Pasta" style="height: 150px; object-fit: cover;">
+                        <div class="card-body p-2">
+                            <h3 class="h6 fw-bold mb-1 text-truncate">Special Pasta</h3>
+                            <p class="text-warning fw-bold small mb-2">Rs. 700</p>
+                            <button class="btn btn-warning w-100 rounded-pill text-white fw-bold btn-sm" onclick="addToCart('Special Pasta', 700)">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<footer class="master-footer">
-    <div class="footer-container">
-        
-        <div class="footer-col">
-            <h3>Company</h3>
-            <ul>
-                <li><a href="#about"><span>&rsaquo;</span> About Us</a></li>
-                <li><a href="#contact"><span>&rsaquo;</span> Contact Us</a></li>
-                <li><a href="#menu"><span>&rsaquo;</span> Reservation</a></li>
-                <li><a href="#"><span>&rsaquo;</span> Privacy Policy</a></li>
-                <li><a href="#"><span>&rsaquo;</span> Terms & Condition</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h3>Contact</h3>
-            <p class="contact-info">📍 G9 sector new blue area, Islamabad, Pakistan</p>
-            <p class="contact-info">📞 +012 345 67890</p>
-            <p class="contact-info">✉️ 2500602@students.au.com</p>
-            <div class="social-icons">
-                <a href="#" class="icon-link">t</a>
-                <a href="#" class="icon-link">f</a>
-                <a href="#" class="icon-link">y</a>
-                <a href="#" class="icon-link">in</a>
+<section id="cart" class="cart-wrapper py-5 hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="cart-section p-4 p-md-5 bg-white rounded-4 shadow border-top border-warning border-5">
+                    <h1 class="text-center fw-bold h3 mb-4 text-dark">🛒 Your Order</h1>
+                    <div class="cart-items-container bg-light p-3 rounded-3 mb-4" style="min-height: 120px;">
+                        <ul id="cartList" class="list-unstyled m-0">
+                            <li class="empty-msg text-center text-muted fst-italic py-4">Your cart is empty. Start adding some delicious food!</li>
+                        </ul>
+                    </div>
+                    <div class="cart-footer d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 pt-3 border-top">
+                        <h2 class="m-0 h4 fw-bold text-dark">Total Bill: <span class="text-warning fs-3 fw-bold">Rs. <span id="total">0</span></span></h2>
+                        <button class="btn btn-warning text-white fw-bold btn-lg rounded-3 px-4 shadow w-100 w-sm-auto" onclick="submitOrder()">Checkout Order</button>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="footer-col">
-            <h3>Opening</h3>
-            <h4>Monday - Saturday</h4>
-            <p>09AM - 09PM</p>
-            <h4>Sunday</h4>
-            <p>10AM - 08PM</p>
-        </div>
-
-        <div class="footer-col">
-            <h3>Newsletter</h3>
-            <p class="newsletter-text"> Write your email to signup.</p>
-            <div class="newsletter-box">
-                <input type="email" placeholder="Your email">
-                <button type="button" onclick="alert('Subscribed Successfully! 🎉')">SIGNUP</button>
-            </div>
-        </div>
-
     </div>
-    <div class="footer-bottom">
-        <p>© 2026 Tasty Bites Restaurant | All Rights Reserved.</p>
+</section>
+
+<section id="contact" class="py-5 hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5">
+                <div class="contact bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+                    <h1 class="text-center fw-bold mb-2 text-dark h3">Get In Touch ✉️</h1>
+                    <p class="text-center text-muted small mb-4">Have a question? Drop us a message below!</p>
+                    <form onsubmit="event.preventDefault(); alert('Message Sent Successfully!'); this.reset();">
+                        <div class="mb-3">
+                            <input type="text" class="form-control py-3 bg-light border-0" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control py-3 bg-light border-0" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control bg-light border-0" rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 py-3 fw-bold rounded-3 shadow">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="master-footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4 px-2">
+            
+            <div class="col-sm-6 col-md-3">
+                <div class="footer-col">
+                    <h3 class="text-warning mb-3 h5 fw-bold">Company</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#about" class="text-light text-decoration-none">&rsaquo; About Us</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">&rsaquo; Contact Us</a></li>
+                        <li><a href="#menu" class="text-light text-decoration-none">&rsaquo; Reservation</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">&rsaquo; Privacy Policy</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">&rsaquo; Terms & Condition</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="footer-col">
+                    <h3 class="text-warning mb-3 h5 fw-bold">Contact</h3>
+                    <p class="text-light small mb-2">📍 G9 sector new blue area, Islamabad, Pakistan</p>
+                    <p class="text-light small mb-2">📞 +012 345 67890</p>
+                    <p class="text-light small mb-3">✉️ 2500602@students.au.com</p>
+                    <div class="social-icons d-flex gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-warning text-white rounded-circle">t</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning text-white rounded-circle">f</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning text-white rounded-circle">y</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning text-white rounded-circle">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="footer-col">
+                    <h3 class="text-warning mb-3 h5 fw-bold">Opening</h3>
+                    <h6 class="fw-bold text-light mb-1 small">Monday - Saturday</h6>
+                    <p class="text-muted small mb-3">09AM - 09PM</p>
+                    <h6 class="fw-bold text-light mb-1 small">Sunday</h6>
+                    <p class="text-muted small">10AM - 08PM</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <div class="footer-col">
+                    <h3 class="text-warning mb-3 h5 fw-bold">Newsletter</h3>
+                    <p class="text-light small mb-3">Write your email to signup.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your email">
+                        <button class="btn btn-warning text-white fw-bold btn-sm" type="button" onclick="alert('Subscribed Successfully! 🎉')">SIGNUP</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5 pt-3 border-top border-secondary text-muted small">
+            <p>© 2026 Tasty Bites Restaurant | All Rights Reserved.</p>
+        </div>
     </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     let total = 0;
@@ -257,14 +336,14 @@
         }
 
         let li = document.createElement("li");
-        li.classList.add("cart-item");
+        li.classList.add("cart-item", "d-flex", "justify-content-between", "align-items-center", "border-bottom", "py-2");
         
         li.innerHTML = `
             <div class="item-info">
                 <strong>${item}</strong>
-                <span class="price-tag">Rs. ${price}</span>
+                <span class="price-tag ms-2 text-muted small">Rs. ${price}</span>
             </div>
-            <button class="cancel-btn" onclick="removeFromCart(this, ${price})">✖</button>
+            <button class="btn btn-sm btn-danger rounded-circle py-0 px-2" onclick="removeFromCart(this, ${price})">✖</button>
         `;
 
         cartList.appendChild(li);
@@ -282,7 +361,7 @@
         document.getElementById("total").innerText = total;
 
         if(itemCount === 0) {
-            document.getElementById("cartList").innerHTML = `<li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>`;
+            document.getElementById("cartList").innerHTML = `<li class="empty-msg text-center text-muted fst-italic py-4">Your cart is empty. Start adding some delicious food!</li>`;
         }
     }
 
@@ -291,7 +370,7 @@
             alert("Your cart is empty! Please add some items first.");
         } else {
             alert("✅ Your order is submitted successfully! Thank you for choosing Tasty Bites.");
-            document.getElementById("cartList").innerHTML = `<li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>`;
+            document.getElementById("cartList").innerHTML = `<li class="empty-msg text-center text-muted fst-italic py-4">Your cart is empty. Start adding some delicious food!</li>`;
             total = 0;
             itemCount = 0;
             document.getElementById("total").innerText = total;
