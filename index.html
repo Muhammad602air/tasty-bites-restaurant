@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+    <h2>Tasty Bites</h2>
+    <ul>
+        <li><a href="#home" class="active-link">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome To Tasty Bites</h1>
+        <p>Fresh Food • Fast Service • Great Taste</p>
+        <a href="#menu" class="btn">Order Now</a>
+    </div>
+</section>
+
+<section id="about">
+    <h1 class="title hidden">Why Choose Us?</h1>
+    <div class="features-container">
+        <div class="feature-box hidden">
+            <span class="icon">🧑‍🍳</span>
+            <h3>Master Chefs</h3>
+            <p>Our expert chefs prepare every dish with passion and perfection.</p>
+        </div>
+        <div class="feature-box hidden">
+            <span class="icon">🍔</span>
+            <h3>Quality Food</h3>
+            <p>We use only the freshest ingredients to ensure premium taste.</p>
+        </div>
+        <div class="feature-box hidden">
+            <span class="icon">🛒</span>
+            <h3>Online Order</h3>
+            <p>Order your favorite meals from the comfort of your home easily.</p>
+        </div>
+        <div class="feature-box hidden">
+            <span class="icon">⏰</span>
+            <h3>24/7 Service</h3>
+            <p>We are open around the clock to satisfy your cravings anytime.</p>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <h1 class="title hidden">Our Menu</h1>
+
+    <div class="menu-tabs hidden">
+        <button class="tab-btn active-tab" onclick="openMenu('breakfast', this)">☀️ Breakfast</button>
+        <button class="tab-btn" onclick="openMenu('dinner', this)">🌙 Lunch & Dinner</button>
+    </div>
+
+    <div id="breakfast" class="menu-category show-menu">
+        <div class="menu-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=60" alt="Chai">
+                <h3>Karak Chai</h3>
+                <p>Rs. 100</p>
+                <button onclick="addToCart('Karak Chai', 100)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=500&q=60" alt="Matka Chai">
+                <h3>Matka Chai</h3>
+                <p>Rs. 150</p>
+                <button onclick="addToCart('Matka Chai', 150)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=500&q=60" alt="Kashmiri Chai">
+                <h3>Kashmiri Chai</h3>
+                <p>Rs. 200</p>
+                <button onclick="addToCart('Kashmiri Chai', 200)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=60" alt="Paratha">
+                <h3>Lacha Paratha</h3>
+                <p>Rs. 120</p>
+                <button onclick="addToCart('Lacha Paratha', 120)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=500&q=60" alt="Cheese Paratha">
+                <h3>Cheese Paratha</h3>
+                <p>Rs. 250</p>
+                <button onclick="addToCart('Cheese Paratha', 250)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dinner" class="menu-category" style="display: none;">
+        <div class="menu-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1615719413546-198b25453f85?auto=format&fit=crop&w=500&q=60" alt="Chicken Burger">
+                <h3>Chicken Burger</h3>
+                <p>Rs. 400</p>
+                <button onclick="addToCart('Chicken Burger', 400)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60" alt="Beef Burger">
+                <h3>Beef Burger</h3>
+                <p>Rs. 600</p>
+                <button onclick="addToCart('Beef Burger', 600)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=60" alt="Zinger Burger">
+                <h3>Zinger Burger</h3>
+                <p>Rs. 500</p>
+                <button onclick="addToCart('Zinger Burger', 500)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60" alt="Cheese Pizza">
+                <h3>Cheese Pizza</h3>
+                <p>Rs. 1200</p>
+                <button onclick="addToCart('Cheese Pizza', 1200)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=60" alt="Pizza Fajita">
+                <h3>Pizza Fajita</h3>
+                <p>Rs. 1300</p>
+                <button onclick="addToCart('Pizza Fajita', 1300)">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=60" alt="Pasta">
+                <h3>Special Pasta</h3>
+                <p>Rs. 700</p>
+                <button onclick="addToCart('Special Pasta', 700)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cart" class="cart-wrapper hidden">
+    <div class="cart-section">
+        <h1>🛒 Your Order</h1>
+        <div class="cart-items-container">
+            <ul id="cartList">
+                <li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>
+            </ul>
+        </div>
+        <div class="cart-footer">
+            <h2>Total Bill: <span>Rs. <span id="total">0</span></span></h2>
+            <button class="btn checkout-btn" onclick="submitOrder()">Checkout & Submit Order</button>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="hidden">
+    <div class="contact-wrapper">
+        <div class="contact">
+            <h1>Get In Touch ✉️</h1>
+            <p class="contact-sub">Have a question? Drop us a message below!</p>
+            <form onsubmit="event.preventDefault(); alert('Message Sent Successfully!'); this.reset();">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="input-group">
+                    <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="master-footer">
+    <div class="footer-container">
+        
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#about"><span>&rsaquo;</span> About Us</a></li>
+                <li><a href="#contact"><span>&rsaquo;</span> Contact Us</a></li>
+                <li><a href="#menu"><span>&rsaquo;</span> Reservation</a></li>
+                <li><a href="#"><span>&rsaquo;</span> Privacy Policy</a></li>
+                <li><a href="#"><span>&rsaquo;</span> Terms & Condition</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p class="contact-info">📍 G9 sector new blue area, Islamabad, Pakistan</p>
+            <p class="contact-info">📞 +012 345 67890</p>
+            <p class="contact-info">✉️ 2500602@students.au.com</p>
+            <div class="social-icons">
+                <a href="#" class="icon-link">t</a>
+                <a href="#" class="icon-link">f</a>
+                <a href="#" class="icon-link">y</a>
+                <a href="#" class="icon-link">in</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Opening</h3>
+            <h4>Monday - Saturday</h4>
+            <p>09AM - 09PM</p>
+            <h4>Sunday</h4>
+            <p>10AM - 08PM</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p class="newsletter-text"> Write your email to signup.</p>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Your email">
+                <button type="button" onclick="alert('Subscribed Successfully! 🎉')">SIGNUP</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Tasty Bites Restaurant | All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let total = 0;
+    let itemCount = 0;
+
+    // MENU TAB LOGIC
+    function openMenu(menuName, element) {
+        let categories = document.getElementsByClassName("menu-category");
+        for(let i = 0; i < categories.length; i++) {
+            categories[i].style.display = "none";
+            categories[i].classList.remove("fade-in");
+        }
+
+        let tabs = document.getElementsByClassName("tab-btn");
+        for(let i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove("active-tab");
+        }
+
+        document.getElementById(menuName).style.display = "block";
+        document.getElementById(menuName).classList.add("fade-in");
+        element.classList.add("active-tab");
+    }
+
+    // CART LOGIC
+    function addToCart(item, price) {
+        let cartList = document.getElementById("cartList");
+        
+        if(itemCount === 0) {
+            cartList.innerHTML = "";
+        }
+
+        let li = document.createElement("li");
+        li.classList.add("cart-item");
+        
+        li.innerHTML = `
+            <div class="item-info">
+                <strong>${item}</strong>
+                <span class="price-tag">Rs. ${price}</span>
+            </div>
+            <button class="cancel-btn" onclick="removeFromCart(this, ${price})">✖</button>
+        `;
+
+        cartList.appendChild(li);
+        
+        total += price;
+        itemCount++;
+        document.getElementById("total").innerText = total;
+    }
+
+    function removeFromCart(buttonElement, price) {
+        buttonElement.parentElement.remove();
+        
+        total -= price;
+        itemCount--;
+        document.getElementById("total").innerText = total;
+
+        if(itemCount === 0) {
+            document.getElementById("cartList").innerHTML = `<li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>`;
+        }
+    }
+
+    function submitOrder() {
+        if(itemCount === 0) {
+            alert("Your cart is empty! Please add some items first.");
+        } else {
+            alert("✅ Your order is submitted successfully! Thank you for choosing Tasty Bites.");
+            document.getElementById("cartList").innerHTML = `<li class="empty-msg">Your cart is empty. Start adding some delicious food!</li>`;
+            total = 0;
+            itemCount = 0;
+            document.getElementById("total").innerText = total;
+        }
+    }
+
+    // SCROLL ANIMATIONS (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
